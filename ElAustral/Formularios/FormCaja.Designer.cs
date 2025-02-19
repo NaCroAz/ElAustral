@@ -35,10 +35,10 @@
             this.button3 = new System.Windows.Forms.Button();
             this.dtFechaInicial = new System.Windows.Forms.DateTimePicker();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnFiltrar = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.dtFechaFinal = new System.Windows.Forms.DateTimePicker();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnFiltrar = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -83,6 +83,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label1.Location = new System.Drawing.Point(512, 19);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(60, 25);
@@ -114,30 +115,20 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.dtFechaInicial);
+            this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.groupBox1.Location = new System.Drawing.Point(794, 163);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(208, 136);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             // 
-            // btnFiltrar
+            // dtFechaFinal
             // 
-            this.btnFiltrar.Location = new System.Drawing.Point(6, 19);
-            this.btnFiltrar.Name = "btnFiltrar";
-            this.btnFiltrar.Size = new System.Drawing.Size(188, 48);
-            this.btnFiltrar.TabIndex = 8;
-            this.btnFiltrar.Text = "Filtrar Fecha";
-            this.btnFiltrar.UseVisualStyleBackColor = true;
-            this.btnFiltrar.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(7, 20);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(67, 13);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "Fecha Inicial";
+            this.dtFechaFinal.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtFechaFinal.Location = new System.Drawing.Point(6, 97);
+            this.dtFechaFinal.Name = "dtFechaFinal";
+            this.dtFechaFinal.Size = new System.Drawing.Size(196, 20);
+            this.dtFechaFinal.TabIndex = 11;
             // 
             // label3
             // 
@@ -148,13 +139,24 @@
             this.label3.TabIndex = 10;
             this.label3.Text = "Fecha Final";
             // 
-            // dtFechaFinal
+            // label2
             // 
-            this.dtFechaFinal.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtFechaFinal.Location = new System.Drawing.Point(6, 97);
-            this.dtFechaFinal.Name = "dtFechaFinal";
-            this.dtFechaFinal.Size = new System.Drawing.Size(196, 20);
-            this.dtFechaFinal.TabIndex = 11;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(7, 20);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(67, 13);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "Fecha Inicial";
+            // 
+            // btnFiltrar
+            // 
+            this.btnFiltrar.Location = new System.Drawing.Point(6, 19);
+            this.btnFiltrar.Name = "btnFiltrar";
+            this.btnFiltrar.Size = new System.Drawing.Size(188, 48);
+            this.btnFiltrar.TabIndex = 8;
+            this.btnFiltrar.Text = "Filtrar Fecha";
+            this.btnFiltrar.UseVisualStyleBackColor = true;
+            this.btnFiltrar.Click += new System.EventHandler(this.button4_Click);
             // 
             // groupBox2
             // 
@@ -169,6 +171,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
             this.ClientSize = new System.Drawing.Size(1014, 417);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
