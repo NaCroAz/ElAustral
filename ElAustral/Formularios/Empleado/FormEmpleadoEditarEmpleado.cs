@@ -119,5 +119,9 @@ namespace ElAustral.Formularios.Empleado
 
         }
 
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

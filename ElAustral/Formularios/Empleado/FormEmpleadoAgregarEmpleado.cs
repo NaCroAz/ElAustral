@@ -1,12 +1,6 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ElAustral.Formularios.Empleado
@@ -16,6 +10,80 @@ namespace ElAustral.Formularios.Empleado
         public FormEmpleadoAgregarEmpleado()
         {
             InitializeComponent();
+            ApplyStyles(); // Aplicar estilos al inicializar el formulario
+        }
+
+        // Método para aplicar estilos
+        private void ApplyStyles()
+        {
+            // Estilo del formulario
+            this.BackColor = Color.FromArgb(30, 30, 30); // Fondo negro
+            this.ForeColor = Color.White; // Texto blanco
+            this.Font = new Font("Segoe UI", 10); // Fuente moderna
+
+            // Recorrer todos los controles del formulario
+            ApplyControlStyles(this);
+        }
+
+        private void ApplyControlStyles(Control parentControl)
+        {
+            foreach (Control control in parentControl.Controls)
+            {
+                // Aplicar estilos a los controles
+                if (control is TextBox)
+                {
+                    TextBox textBox = (TextBox)control;
+                    textBox.BackColor = Color.FromArgb(45, 45, 45); // Fondo gris oscuro
+                    textBox.ForeColor = Color.White; // Texto blanco
+                    textBox.BorderStyle = BorderStyle.FixedSingle; // Borde fijo
+                    textBox.Font = new Font("Segoe UI", 10); // Fuente moderna
+                }
+                else if (control is ComboBox)
+                {
+                    ComboBox comboBox = (ComboBox)control;
+                    comboBox.BackColor = Color.FromArgb(45, 45, 45); // Fondo gris oscuro
+                    comboBox.ForeColor = Color.White; // Texto blanco
+                    comboBox.Font = new Font("Segoe UI", 10); // Fuente moderna
+                }
+                else if (control is DateTimePicker)
+                {
+                    DateTimePicker dateTimePicker = (DateTimePicker)control;
+                    dateTimePicker.BackColor = Color.FromArgb(45, 45, 45); // Fondo gris oscuro
+                    dateTimePicker.ForeColor = Color.White; // Texto blanco
+                    dateTimePicker.Font = new Font("Segoe UI", 10); // Fuente moderna
+                    dateTimePicker.CalendarMonthBackground = Color.FromArgb(45, 45, 45); // Fondo del calendario
+                    dateTimePicker.CalendarTitleBackColor = Color.FromArgb(45, 45, 45); // Fondo del título del calendario
+                    dateTimePicker.CalendarTitleForeColor = Color.White; // Texto del título del calendario
+                    dateTimePicker.CalendarForeColor = Color.White; // Texto del calendario
+                }
+                else if (control is Button)
+                {
+                    Button button = (Button)control;
+                    button.BackColor = Color.FromArgb(255, 111, 0); // Fondo naranja
+                    button.ForeColor = Color.White; // Texto blanco
+                    button.FlatStyle = FlatStyle.Flat; // Estilo plano
+                    button.FlatAppearance.BorderSize = 0; // Sin borde
+                    button.Font = new Font("Segoe UI", 10, FontStyle.Bold); // Fuente moderna
+                    button.UseVisualStyleBackColor = false; // Deshabilitar estilos visuales predeterminados
+                }
+                else if (control is Label)
+                {
+                    control.ForeColor = Color.White; // Texto blanco
+                    control.Font = new Font("Segoe UI", 10); // Fuente moderna
+                }
+                else if (control is GroupBox || control is Panel)
+                {
+                    control.BackColor = Color.FromArgb(30, 30, 30); // Fondo negro
+                    control.ForeColor = Color.White; // Texto blanco
+                    control.Font = new Font("Segoe UI", 10); // Fuente moderna
+                }
+
+                // Si el control tiene controles hijos, recorrerlos también
+                if (control.HasChildren)
+                {
+                    ApplyControlStyles(control); // Llamada recursiva
+                }
+            }
         }
 
         //Cerrar
@@ -110,9 +178,12 @@ namespace ElAustral.Formularios.Empleado
 
         private void FormEmpleadoAgregarEmpleado_Load(object sender, EventArgs e)
         {
+            // Puedes agregar lógica adicional al cargar el formulario
+        }
+
+        private void txtNombre_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }
-
 }
-
