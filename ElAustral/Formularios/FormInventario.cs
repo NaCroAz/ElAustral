@@ -47,6 +47,8 @@ namespace ElAustral
         }
 
         //Cargar
+        //Cargar
+        //Cargar
         private void button2_Click(object sender, EventArgs e)
         {
             button2.Text = ("Recargar Productos");
@@ -68,6 +70,18 @@ namespace ElAustral
 
                     // Asigna el DataTable al DataGridView
                     dataGridView1.DataSource = tablaProductos;
+
+                    // Ajustar el ancho de las columnas
+                    dataGridView1.Columns["ID"].Width = 50; // Ancho fijo para la columna ID
+                    dataGridView1.Columns["Precio"].Width = 70; // Ancho fijo para la columna Precio
+                    dataGridView1.Columns["Stock"].Width = 70; // Ancho fijo para la columna Stock
+                    dataGridView1.Columns["Producto"].Width = 150; // Ancho fijo para la columna Producto
+                    dataGridView1.Columns["Descripcion"].Width = 200; // Ancho fijo para la columna Descripcion
+                    dataGridView1.Columns["Horario"].Width = 100; // Ancho fijo para la columna Horario
+                    dataGridView1.Columns["Categoria"].Width = 100; // Ancho fijo para la columna Categoria
+
+                    // Ajustar automáticamente el ancho de las columnas según el contenido
+                    dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
                 }
                 catch (Exception ex)
                 {
